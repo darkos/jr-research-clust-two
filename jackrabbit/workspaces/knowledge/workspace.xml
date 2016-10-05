@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><Workspace name="knowledge">
+		<FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
+			<param name="path" value="${wsp.home}/default"/>
+		</FileSystem>
+		<PersistenceManager class="org.apache.jackrabbit.core.persistence.pool.MySqlPersistenceManager">
+	      <param name="dataSourceName" value="jackrabbitdatasource"/>
+	      <param name="schemaObjectPrefix" value="pm_${wsp.name}_"/>
+	    </PersistenceManager>
+		<SearchIndex class="org.apache.jackrabbit.core.query.lucene.SearchIndex">
+			<param name="path" value="${wsp.home}/index"/>
+			<param name="supportHighlighting" value="true"/>
+		</SearchIndex>
+	</Workspace>
